@@ -9,6 +9,7 @@ public class LearningTheRopes {
     public static final String MOD_ID = "learningtheropes";
 
     public LearningTheRopes(IEventBus eventBus, ModContainer modContainer) {
-
+        Blocks.BLOCKS.register(eventBus);
+        Items.ITEMS.register(eventBus);
     }
 }
