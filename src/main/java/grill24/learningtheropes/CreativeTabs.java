@@ -20,6 +20,7 @@ public class CreativeTabs {
             .icon(() -> new ItemStack(Blocks.BLUE_STONE.value()))
             .displayItems((params, output) -> {
                 output.accept(Blocks.BLUE_STONE.value());
+                output.accept(Blocks.TOGGLER.value());
             })
             .build());
 

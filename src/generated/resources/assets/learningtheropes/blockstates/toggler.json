@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "learningtheropes:block/toggler_off"
+    },
+    "lit=true": {
+      "model": "learningtheropes:block/toggler_on"
+    }
+  }
+}

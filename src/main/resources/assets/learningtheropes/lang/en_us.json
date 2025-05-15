@@ -1,5 +1,9 @@
 {
   "block.learningtheropes.blue_stone": "Blue Stone",
   "item.learningtheropes.blue_stone": "Blue Stone",
+
+  "block.learningtheropes.toggler": "Toggler",
+  "item.learningtheropes.toggler": "Toggler",
+
   "tab.learningtheropes.title": "Learning the Ropes"
 }

@@ -13,4 +13,8 @@ public class Items {
     public static final Holder<Item> BLUE_STONE = ITEMS.register("blue_stone", (resourceLocation) -> new BlockItem(Blocks.BLUE_STONE.value(), new Item.Properties()
             .setId(ResourceKey.create(Registries.ITEM, resourceLocation))
     ));
+
+    public static final Holder<Item> TOGGLER = ITEMS.register("toggler", (resourceLocation) -> new BlockItem(Blocks.TOGGLER.value(), new Item.Properties()
+            .setId(ResourceKey.create(Registries.ITEM, resourceLocation))
+    ));
 }

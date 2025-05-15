@@ -1,4 +1,8 @@
-// 1.21.4	2025-05-14T10:08:42.1551437	Model Definitions - learningtheropes
+// 1.21.4	2025-05-15T18:43:05.3369895	Model Definitions - learningtheropes
 b70e9f75daa7608ea49e147c1e5f5c2c4a0f06d1 assets/learningtheropes/blockstates/blue_stone.json
+4227600cf83cc63116cd7630a3b6506636d88a04 assets/learningtheropes/blockstates/toggler.json
 f6df31c98dc688cd13b5c1717335a419248ee272 assets/learningtheropes/items/blue_stone.json
+74af09f0ca85ce5e87c0f71e2348ec8b762b4bd9 assets/learningtheropes/items/toggler.json
 bd37d732c524733f6ce64d87f1d502c63af00c35 assets/learningtheropes/models/block/blue_stone.json
+ea87642546fb0094a2ddc1c26aa1153bb3e80c1c assets/learningtheropes/models/block/toggler_off.json
+5e4f8a757ac81944494ff964b401529de57964a4 assets/learningtheropes/models/block/toggler_on.json
