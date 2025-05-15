@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "learningtheropes:item/blue_stone"
+    "model": "learningtheropes:block/blue_stone"
   }
 }
