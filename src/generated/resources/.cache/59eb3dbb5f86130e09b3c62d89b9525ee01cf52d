@@ -1,2 +1,4 @@
-// 1.21.4	2025-05-16T15:02:27.2745245	Loot Tables
+// 1.21.4	2025-05-23T10:48:01.3467189	Loot Tables
 da8570844c5a27e4622d22d4069120c4e6dd98c8 data/learningtheropes/loot_table/blocks/blue_stone.json
+4855988d440b4dffd3cf562160a2e3421a47b33e data/learningtheropes/loot_table/blocks/box_fan.json
+6fd1d45c4cef8ea8d6caf45c81a07395d40e3277 data/learningtheropes/loot_table/blocks/toggler.json

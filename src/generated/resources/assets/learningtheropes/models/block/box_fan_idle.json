@@ -1,0 +1,6 @@
+{
+  "parent": "learningtheropes:block/box_fan",
+  "textures": {
+    "fan": "learningtheropes:block/box_fan_idle"
+  }
+}

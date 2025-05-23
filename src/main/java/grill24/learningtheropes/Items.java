@@ -17,4 +17,8 @@ public class Items {
     public static final Holder<Item> TOGGLER = ITEMS.register("toggler", (resourceLocation) -> new BlockItem(Blocks.TOGGLER.value(), new Item.Properties()
             .setId(ResourceKey.create(Registries.ITEM, resourceLocation))
     ));
+
+    public static final Holder<Item> BOX_FAN = ITEMS.register("box_fan", (resourceLocation) -> new BlockItem(Blocks.BOX_FAN.value(), new Item.Properties()
+            .setId(ResourceKey.create(Registries.ITEM, resourceLocation))
+    ));
 }

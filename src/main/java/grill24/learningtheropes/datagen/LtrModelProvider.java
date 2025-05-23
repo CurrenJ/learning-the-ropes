@@ -8,9 +8,7 @@ import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.blockstates.BlockStateGenerator;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
-import net.minecraft.client.data.models.model.ItemModelUtils;
-import net.minecraft.client.data.models.model.ModelTemplates;
-import net.minecraft.client.data.models.model.TextureMapping;
+import net.minecraft.client.data.models.model.*;
 import net.minecraft.client.renderer.item.ItemModel;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -19,16 +17,26 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
+import java.util.Optional;
+
 @EventBusSubscriber(modid = LearningTheRopes.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class LtrModelProvider extends ModelProvider {
     public LtrModelProvider(PackOutput output) {
         super(output, LearningTheRopes.MOD_ID);
     }
 
+    public static final ModelTemplate BOX_FAN = new ModelTemplate(
+            Optional.of(ResourceLocation.fromNamespaceAndPath(LearningTheRopes.MOD_ID, "block/box_fan")),
+            Optional.empty(),
+            TextureSlot.FAN
+    );
+
     @Override
     protected void registerModels(BlockModelGenerators blockModelGenerators, ItemModelGenerators itemModelGenerators) {
+        // Blue Stone
         blockModelGenerators.createTrivialCube(Blocks.BLUE_STONE.value());
 
+        // Toggler Block
         TextureMapping textureMappingOff = TextureMapping.cube(ResourceLocation.fromNamespaceAndPath(LearningTheRopes.MOD_ID, "block/toggler_off"));
         ResourceLocation togglerModelOff = ModelTemplates.CUBE_ALL.create(ResourceLocation.fromNamespaceAndPath(LearningTheRopes.MOD_ID, "block/toggler_off"),
                 textureMappingOff, blockModelGenerators.modelOutput);
@@ -43,6 +51,28 @@ public class LtrModelProvider extends ModelProvider {
 
         ItemModel.Unbaked togglerItemModel = ItemModelUtils.plainModel(togglerModelOff);
         itemModelGenerators.itemModelOutput.accept(Items.TOGGLER.value(), togglerItemModel);
+
+        // Box Fan Block
+        TextureMapping boxFanTextureIdle = new TextureMapping().put(TextureSlot.FAN, ResourceLocation.fromNamespaceAndPath(LearningTheRopes.MOD_ID, "block/box_fan_idle"));
+        ResourceLocation boxFanModelIdle = BOX_FAN.create(
+                ResourceLocation.fromNamespaceAndPath(LearningTheRopes.MOD_ID, "block/box_fan_idle"),
+                boxFanTextureIdle,
+                blockModelGenerators.modelOutput);
+
+        TextureMapping boxFanTextureActive = new TextureMapping().put(TextureSlot.FAN, ResourceLocation.fromNamespaceAndPath(LearningTheRopes.MOD_ID, "block/box_fan"));
+        ResourceLocation boxFanModelActive = BOX_FAN.create(
+                ResourceLocation.fromNamespaceAndPath(LearningTheRopes.MOD_ID, "block/box_fan_active"),
+                boxFanTextureActive,
+                blockModelGenerators.modelOutput
+        );
+
+        BlockStateGenerator boxFanGenerator = MultiVariantGenerator.multiVariant(Blocks.BOX_FAN.value())
+                .with(BlockModelGenerators.createBooleanModelDispatch(BlockStateProperties.LIT, boxFanModelActive, boxFanModelIdle))
+                .with(BlockModelGenerators.createFacingDispatch());
+        blockModelGenerators.blockStateOutput.accept(boxFanGenerator);
+
+        ItemModel.Unbaked boxFanItemModel = ItemModelUtils.plainModel(boxFanModelIdle);
+        itemModelGenerators.itemModelOutput.accept(Items.BOX_FAN.value(), boxFanItemModel);
     }
 
     @SubscribeEvent

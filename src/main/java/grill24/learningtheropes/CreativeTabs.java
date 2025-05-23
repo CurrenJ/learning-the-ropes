@@ -21,6 +21,7 @@ public class CreativeTabs {
             .displayItems((params, output) -> {
                 output.accept(Blocks.BLUE_STONE.value());
                 output.accept(Blocks.TOGGLER.value());
+                output.accept(Blocks.BOX_FAN.value());
             })
             .build());
 

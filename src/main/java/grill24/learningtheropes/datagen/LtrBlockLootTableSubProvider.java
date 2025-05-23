@@ -16,11 +16,17 @@ public class LtrBlockLootTableSubProvider extends BlockLootSubProvider {
 
     @Override
     public Iterable<Block> getKnownBlocks() {
-        return List.of(Blocks.BLUE_STONE.value());
+        return List.of(
+                Blocks.BLUE_STONE.value(),
+                Blocks.TOGGLER.value(),
+                Blocks.BOX_FAN.value()
+        );
     }
 
     @Override
     protected void generate() {
         this.dropSelf(Blocks.BLUE_STONE.value());
+        this.dropSelf(Blocks.TOGGLER.value());
+        this.dropSelf(Blocks.BOX_FAN.value());
     }
 }

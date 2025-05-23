@@ -38,6 +38,7 @@ public class TogglerBlock extends Block {
                     p_55667_.scheduleTick(p_55668_, this, 4);
                 } else {
                     p_55667_.setBlock(p_55668_, p_55666_.cycle(BlockStateProperties.LIT), 2);
+                    p_55667_.scheduleTick(p_55668_, this, 2);
                 }
             }
         }
