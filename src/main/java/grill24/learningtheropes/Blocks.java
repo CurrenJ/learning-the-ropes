@@ -7,6 +7,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class Blocks {
@@ -26,5 +27,12 @@ public class Blocks {
             BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.DISPENSER)
                     .setId(ResourceKey.create(Registries.BLOCK, resourceLocation))
                     .requiresCorrectToolForDrops()
+    ));
+
+    public static final Holder<Block> SOLAR_PANEL = BLOCKS.register("solar_panel", (resourceLocation) -> new grill24.learningtheropes.block.SolarPanelBlock(
+            BlockBehaviour.Properties.ofFullCopy(net.minecraft.world.level.block.Blocks.IRON_BLOCK)
+                    .setId(ResourceKey.create(Registries.BLOCK, resourceLocation))
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
     ));
 }

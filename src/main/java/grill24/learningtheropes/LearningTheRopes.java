@@ -12,5 +12,7 @@ public class LearningTheRopes {
         Blocks.BLOCKS.register(eventBus);
         Items.ITEMS.register(eventBus);
         CreativeTabs.TABS.register(eventBus);
+        BlockEntities.BLOCK_ENTITIES.register(eventBus);
+        Menus.MENUS.register(eventBus);
     }
 }

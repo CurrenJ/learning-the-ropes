@@ -22,6 +22,7 @@ public class CreativeTabs {
                 output.accept(Blocks.BLUE_STONE.value());
                 output.accept(Blocks.TOGGLER.value());
                 output.accept(Blocks.BOX_FAN.value());
+                output.accept(Blocks.SOLAR_PANEL.value());
             })
             .build());
 

@@ -1,9 +1,11 @@
-// 1.21.4	2025-05-23T10:45:28.6870493	Model Definitions - learningtheropes
+// 1.21.4	2025-05-29T17:35:05.0988093	Model Definitions - learningtheropes
 b70e9f75daa7608ea49e147c1e5f5c2c4a0f06d1 assets/learningtheropes/blockstates/blue_stone.json
 2f5e233a0491d09e386a012ad99a507b1c557b30 assets/learningtheropes/blockstates/box_fan.json
+26de538827521236ad6795b389d1fa6ee85d8261 assets/learningtheropes/blockstates/solar_panel.json
 4227600cf83cc63116cd7630a3b6506636d88a04 assets/learningtheropes/blockstates/toggler.json
 f6df31c98dc688cd13b5c1717335a419248ee272 assets/learningtheropes/items/blue_stone.json
 b0015df332c8a189793af7410137271f7e899ecc assets/learningtheropes/items/box_fan.json
+aeaa99fd7b046c0c97d14e83ee2bce4d1ff84f39 assets/learningtheropes/items/solar_panel.json
 74af09f0ca85ce5e87c0f71e2348ec8b762b4bd9 assets/learningtheropes/items/toggler.json
 bd37d732c524733f6ce64d87f1d502c63af00c35 assets/learningtheropes/models/block/blue_stone.json
 12da9306b0f0fa67ea9b45bdc60a11de135ba35e assets/learningtheropes/models/block/box_fan_active.json
