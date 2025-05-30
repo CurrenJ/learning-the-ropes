@@ -34,7 +34,7 @@ public class SolarPanelBlockEntity extends RandomizableContainerBlockEntity {
 
     private final EnergyStorage energyStorageCapability;
     private final IEnergyStorage energyOutputCapability;
-    private static final int MAX_STORED_ENERGY = 10000;
+    private static final int MAX_STORED_ENERGY = 1000;
 
     private int energyStoredLastTick = 0; // Used to track energy changes
     private int lastTickEnergyDelta = 0;
@@ -196,7 +196,7 @@ public class SolarPanelBlockEntity extends RandomizableContainerBlockEntity {
         if (side == Direction.DOWN) {
             return blockEntity.energyOutputCapability; // Output energy to the block below
         }
-        return blockEntity.energyStorageCapability;
+        return null; // No energy output or input on other sides
     }
 
     public int getStoredEnergy() {
