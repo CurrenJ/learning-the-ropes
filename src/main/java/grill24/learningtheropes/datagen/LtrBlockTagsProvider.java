@@ -26,6 +26,6 @@ public class LtrBlockTagsProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(Blocks.BLUE_STONE.value(), Blocks.TOGGLER.value(), Blocks.BOX_FAN.value());
+                .add(Blocks.BLUE_STONE.value(), Blocks.TOGGLER.value(), Blocks.BOX_FAN.value(), Blocks.SOLAR_PANEL.value());
     }
 }

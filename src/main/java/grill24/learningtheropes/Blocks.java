@@ -1,6 +1,7 @@
 package grill24.learningtheropes;
 
 import grill24.learningtheropes.block.BoxFanBlock;
+import grill24.learningtheropes.block.SolarPanelBlock;
 import grill24.learningtheropes.block.TogglerBlock;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
@@ -27,4 +28,11 @@ public class Blocks {
                     .setId(ResourceKey.create(Registries.BLOCK, resourceLocation))
                     .requiresCorrectToolForDrops()
     ));
+
+    public static final Holder<Block> SOLAR_PANEL = BLOCKS.register("solar_panel", (resourceLocation -> new SolarPanelBlock(
+            BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, resourceLocation))
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()
+    )));
 }

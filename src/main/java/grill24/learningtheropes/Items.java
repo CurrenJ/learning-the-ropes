@@ -21,4 +21,8 @@ public class Items {
     public static final Holder<Item> BOX_FAN = ITEMS.register("box_fan", (resourceLocation) -> new BlockItem(Blocks.BOX_FAN.value(), new Item.Properties()
             .setId(ResourceKey.create(Registries.ITEM, resourceLocation))
     ));
+
+    public static final Holder<Item> SOLAR_PANEL = ITEMS.register("solar_panel", (resourceLocation -> new BlockItem(Blocks.SOLAR_PANEL.value(), new Item.Properties()
+            .setId(ResourceKey.create(Registries.ITEM, resourceLocation))
+    )));
 }

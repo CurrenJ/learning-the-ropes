@@ -19,7 +19,8 @@ public class LtrBlockLootTableSubProvider extends BlockLootSubProvider {
         return List.of(
                 Blocks.BLUE_STONE.value(),
                 Blocks.TOGGLER.value(),
-                Blocks.BOX_FAN.value()
+                Blocks.BOX_FAN.value(),
+                Blocks.SOLAR_PANEL.value()
         );
     }
 
@@ -28,5 +29,6 @@ public class LtrBlockLootTableSubProvider extends BlockLootSubProvider {
         this.dropSelf(Blocks.BLUE_STONE.value());
         this.dropSelf(Blocks.TOGGLER.value());
         this.dropSelf(Blocks.BOX_FAN.value());
+        this.dropSelf(Blocks.SOLAR_PANEL.value());
     }
 }

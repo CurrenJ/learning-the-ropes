@@ -5,5 +5,11 @@
   "block.learningtheropes.toggler": "Toggler",
   "item.learningtheropes.toggler": "Toggler",
 
+  "block.learningtheropes.box_fan": "Box Fan",
+  "item.learningtheropes.box_fan": "Box Fan",
+
+  "block.learningtheropes.solar_panel": "Solar Panel",
+  "item.learningtheropes.solar_panel": "Solar Panel",
+
   "tab.learningtheropes.title": "Learning the Ropes"
 }
