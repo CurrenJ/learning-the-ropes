@@ -15,7 +15,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -130,8 +129,6 @@ public class SolarPanelBlockEntity extends RandomizableContainerBlockEntity {
             if (level.isDay() && level.canSeeSky(pos)) {
                 blockEntity.energyStorage.receiveEnergy(1, false);
             }
-
-            System.out.println(blockEntity.energyStorage.getEnergyStored());
 
             IEnergyStorage other = serverLevel.getCapability(Capabilities.EnergyStorage.BLOCK, pos.below(), Direction.UP);
             if (other != null) {
